@@ -1,0 +1,93 @@
+:root {
+    --yellow: #F4D04E;
+    --gray-950: #111111;
+    --gray-500: #6B6B6B;
+    --text-preset-1: 800 24px/1.5 'Figtree', sans-serif;
+    --text-preset-2: 500 16px/1.5 'Figtree', sans-serif; 
+    --text-preset-3: 500 14px/1.5 'Figtree', sans-serif; 
+    --text-preset-3-bold: 800 14px/1.5 'Figtree', sans-serif;  
+}
+
+body {
+    background-color: var(--yellow);
+    margin: 0px;
+}
+
+.container {
+    display: flex;
+    margin-top: 219px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    background-color: white;
+    width: 384px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 1px solid var(--gray-950);
+    box-shadow: 8px 8px 0px 0px #000000;
+}
+
+.thumbnail {
+  border-radius: 10px;
+  align-self: center;
+  width: auto;
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+.categorie {
+    margin: 0;
+    background-color: var(--yellow);
+    font: var(--text-preset-3-bold);
+    width: auto;
+    margin-left: 24px;
+    margin-bottom: 12px;
+    padding: 4px 12px 4px 12px;
+    border-radius: 4px;
+}
+
+.data {
+    font: var(--text-preset-3);
+    color: var(--gray-950);
+    margin: 0;
+    margin-left: 24px;
+    margin-bottom: 12px;
+}
+
+h1 {
+    margin: 0;
+    font: var(--text-preset-1);
+    color: var(--gray-950);
+    margin-left: 24px;
+    margin-bottom: 12px;
+}
+
+.content {
+    margin: 0;
+    font: var(--text-preset-2);
+    margin-left: 24px;
+    margin-bottom: 24px;
+    color: var(--gray-500);
+}
+
+.user {
+    display: flex;
+    align-items: center;
+    margin-left: 24px;
+    margin-bottom: 24px;
+}
+
+.user_img {
+    width: 32px;
+}
+
+.user_name {
+    margin: 0;
+    margin-left: 12px;
+    font: var(--text-preset-3-bold);
+}
