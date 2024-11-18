@@ -18,6 +18,7 @@ body {
     margin-top: 219px;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 48px;
 }
 
 .card {
@@ -30,14 +31,24 @@ body {
     box-sizing: border-box;
     border: 1px solid var(--gray-950);
     box-shadow: 8px 8px 0px 0px #000000;
+    padding: 24px; /* Substitui as margens da imagem por padding no card */
+}
+
+.categorie,
+.data,
+h1,
+.content,
+.user {
+    margin-left: 0; /* Remove margens adicionais, agora controladas pelo padding do card */
 }
 
 .thumbnail {
-  border-radius: 10px;
-  align-self: center;
-  width: auto;
-  margin-top: 24px;
-  margin-bottom: 24px;
+    border-radius: 10px;
+    align-self: center;
+    max-width: 100%; /* Garante que a largura da imagem não exceda a do card */
+    height: auto; /* Mantém a proporção */
+    display: block; /* Evita espaços extras ao redor da imagem */
+    margin-bottom: 24px;
 }
 
 .categorie {
@@ -45,7 +56,6 @@ body {
     background-color: var(--yellow);
     font: var(--text-preset-3-bold);
     width: auto;
-    margin-left: 24px;
     margin-bottom: 12px;
     padding: 4px 12px 4px 12px;
     border-radius: 4px;
@@ -55,22 +65,36 @@ body {
     font: var(--text-preset-3);
     color: var(--gray-950);
     margin: 0;
-    margin-left: 24px;
     margin-bottom: 12px;
+}
+
+a {
+    text-decoration: none;
 }
 
 h1 {
     margin: 0;
     font: var(--text-preset-1);
     color: var(--gray-950);
-    margin-left: 24px;
     margin-bottom: 12px;
+}
+
+h1:hover {
+    color: var(--yellow);
+    cursor: pointer;
+}
+
+a:focus h1{
+    color: var(--yellow);
+}
+
+a:focus {
+    outline: none;
 }
 
 .content {
     margin: 0;
     font: var(--text-preset-2);
-    margin-left: 24px;
     margin-bottom: 24px;
     color: var(--gray-500);
 }
@@ -78,8 +102,6 @@ h1 {
 .user {
     display: flex;
     align-items: center;
-    margin-left: 24px;
-    margin-bottom: 24px;
 }
 
 .user_img {
@@ -91,3 +113,17 @@ h1 {
     margin-left: 12px;
     font: var(--text-preset-3-bold);
 }
+
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+@media (max-width: 500px) {
+    .card {
+        width: 327px;
+    }
+    h1 {
+        font-size: 20px;
+    }
+}   
